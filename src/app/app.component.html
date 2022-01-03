@@ -64,7 +64,7 @@
            <h5 class="modal-title" id="addWineModalLabel">Add Wine</h5>
         </div>
         <div class="modal-body">
-           <form>
+           <form #addForm="ngForm" (ngSubmit)="onAddWine(addForm)">
                <div class="form-group">
                   <label for="name">Name</label>
                   <input type="text" ngModel name="name" class="form-control" id="name" placeholder="Name" required>
@@ -98,8 +98,8 @@
                   <input type="text" ngModel name="imageURL" class="form-control" id="imageURL" placeholder="Image URL" required>
                </div>
                <div class="modal-footer">
-                  <button type="button" id="add-employee-form" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-primary" >Save changes</button>
+                  <button type="button" id="add-wine-form" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button [disabled]="addForm.invalid" type="submit" class="btn btn-primary" >Save changes</button>
                </div>
            </form>
         </div>

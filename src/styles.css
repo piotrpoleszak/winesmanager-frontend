@@ -92,7 +92,6 @@ a
     color: #fff;
 }
 
-
 .list-group-item
 {
     background-color: #383838;
@@ -112,6 +111,11 @@ a
 .modal-header
 {
     justify-content: center;
+}
+
+.modal-footer
+{
+    margin-top: 2.5rem;
 }
 
 /* MEDIA QUERIES */

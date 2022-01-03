@@ -2,6 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Wine } from './wine';
 import { WineService } from './wine.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -26,6 +27,20 @@ export class AppComponent implements OnInit {
         alert(error.message);
       }
     );
+  }
+
+  public onAddWine(addForm: NgForm): void {
+    document.getElementById('add-wine-form')?.click();
+    this.wineService.addWine(addForm.value).subscribe(
+      (response: Wine) => {
+        console.log(response);
+        this.getWines();
+      },
+      (error: HttpErrorResponse) => {
+        alert(error.message);
+      }
+    );
+   
   }
 
   public onOpenModal(wine: Wine | null, mode: string): void {
