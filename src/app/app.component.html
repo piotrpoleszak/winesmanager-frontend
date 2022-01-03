@@ -12,7 +12,7 @@
    <div class="collapse navbar-collapse" id="navbarColor02">
       <ul class="navbar-nav ml-auto">
          <li class="nav-item active">
-            <a class="nav-link">Add<span class="sr-only">(current)</span></a>
+            <a class="nav-link" (click)="onOpenModal(null, 'add')">Add<span class="sr-only">(current)</span></a>
          </li>
          <li class="nav-item active">
             <a class="nav-link">Dashboard<span class="sr-only">(current)</span></a>
@@ -44,12 +44,29 @@
              <li class="list-group-item"><i class="uil uil-map float-right"></i>Country: {{wine?.country}}</li>
              <li class="list-group-item"><i class="uil uil-calendar-alt float-right"></i>Vinatge: {{wine?.vintage}}</li>
           </ul>
-          <!-- <div class="card-body">
+          <div class="card-body">
              <div class="float-right btn-group btn-group-sm">
                 <a (click)="onOpenModal(wine, 'edit')" class="btn btn-primary tooltips" data-placement="top" data-original-title="Edit"><i class="fa fa-pencil"></i> </a>
                 <a (click)="onOpenModal(wine, 'delete')" class="btn btn-secondary tooltips" data-placement="top" data-original-title="Delete"><i class="fa fa-times"></i></a>
              </div>
-          </div> -->
+          </div>
        </div>
     </div>
   </div>
+
+
+<!-- MODAL -->
+<!-- Add Wine Modal -->
+<div class="modal fade" id="addWineModal" tabindex="-1" role="dialog" aria-labelledby="addWineModalLabel" aria-hidden="true">
+
+ </div>
+
+ <!-- Edit Wine Modal -->
+<div class="modal fade" id="editWineModal" tabindex="-1" role="dialog" aria-labelledby="editWineModalLabel" aria-hidden="true">
+
+</div>
+
+<!-- Delete Wine Modal -->
+<div class="modal fade" id="deleteWineModal" tabindex="-1" role="dialog" aria-labelledby="deleteWineModalLabel" aria-hidden="true">
+
+</div>
