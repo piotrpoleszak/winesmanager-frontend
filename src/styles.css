@@ -26,9 +26,23 @@ body
     margin-left: 3rem;
 }
 
-.nav-item
+.nav-link:hover
 {
-    margin-right: 2rem;
+    cursor: pointer;
+    color: #B0B0B0!important;
+    text-decoration: none;
+}
+
+.form-control
+{
+    background-color: #B0B0B0;
+}
+.form-control:focus
+{
+    border-color: #cccccc;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: #FFF;
 }
 
 
@@ -71,14 +85,8 @@ h1, h2, h3, h4, h5, h6
 a 
 {
     color: #fff;
-    text-decoration: none;
 }
 
-a:hover
-{
-    color: #B0B0B0;
-    text-decoration: none;
-}
 
 .list-group-item
 {
