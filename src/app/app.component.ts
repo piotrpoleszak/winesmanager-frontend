@@ -27,4 +27,15 @@ export class AppComponent implements OnInit {
       }
     );
   }
+
+  public onOpenModal(wine: Wine, mode: string): void {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.style.display = 'none';
+    button.setAttribute('data-toggle', 'modal');
+
+    if(mode === 'add') {
+      button.setAttribute('data-target', 'modal');
+    }
+  }
 }
