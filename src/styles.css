@@ -1,12 +1,33 @@
 @import 'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css';
 @import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css';
 
+
+/* MAIN */
 body
 {
-    margin-top:20px;
     background: #202020;
 }
 
+
+/* NAVBAR */
+.navbar
+{
+    margin-bottom: 100px;
+}
+
+.nav-img
+{
+    width: 2rem;
+    margin-right: 2rem;
+}
+
+.form-inline
+{
+    margin-left: 2rem;
+}
+
+
+/* CONTAINER */
 .card 
 {
     border: none;
@@ -19,7 +40,7 @@ body
 
 .w-60
 {
-    width: 60px;
+    width: 100px;
 }
 
 h1, h2, h3, h4, h5, h6 
@@ -57,4 +78,17 @@ a:hover
 .list-group-item
 {
     background-color: #383838;
+}
+
+@media screen and (max-width: 1200px)
+{
+    .form-inline
+    {
+        margin: auto;
+    }
+
+    .navbar
+    {
+        justify-content: center;
+    }
 }
