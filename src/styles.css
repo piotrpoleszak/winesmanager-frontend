@@ -98,6 +98,21 @@ a
     background-color: #383838;
 }
 
+/* MODAL */
+.modal-content
+{
+    background-color: #202020;
+}
+
+.modal-content
+{
+    color: #FFF;
+}
+
+.modal-header
+{
+    justify-content: center;
+}
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 1199.5px)

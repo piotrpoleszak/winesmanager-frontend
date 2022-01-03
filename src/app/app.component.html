@@ -55,11 +55,57 @@
   </div>
 
 
-<!-- MODAL -->
+<!-- MODALS -->
 <!-- Add Wine Modal -->
 <div class="modal fade" id="addWineModal" tabindex="-1" role="dialog" aria-labelledby="addWineModalLabel" aria-hidden="true">
-
- </div>
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+        <div class="modal-header">
+           <h5 class="modal-title" id="addWineModalLabel">Add Wine</h5>
+        </div>
+        <div class="modal-body">
+           <form>
+               <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" ngModel name="name" class="form-control" id="name" placeholder="Name" required>
+               </div>
+               <div class="form-group">
+                  <label for="strain">Strain</label>
+                  <input type="strain" ngModel name="strain" class="form-control" id="strain" placeholder="Strain" required>
+               </div>
+               <div class="form-group">
+                  <label for="color">Color</label>
+                  <input type="text" ngModel name="color" class="form-control" id="color" placeholder="Color" required>
+               </div>
+               <div class="form-group">
+                  <label for="vintage">Vintage</label>
+                  <input type="number" ngModel name="vintage" class="form-control" id="vintage" min="1700" max="2022" placeholder="2018" required>
+               </div>
+               <div class="form-group">
+                     <label for="taste">Taste</label>
+                     <input type="text" ngModel name="taste" class="form-control" id="taste" placeholder="Taste" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="country">Country</label>
+                     <input type="text" ngModel name="country" class="form-control" id="country" placeholder="Country" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="rating">Rating</label>
+                     <input type="number" ngModel name="rating" class="form-control" id="rating" min="0" max="5" placeholder="0-5" required>
+                  </div> 
+               <div class="form-group">
+                  <label for="color">Image URL</label>
+                  <input type="text" ngModel name="imageURL" class="form-control" id="imageURL" placeholder="Image URL" required>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" id="add-employee-form" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-primary" >Save changes</button>
+               </div>
+           </form>
+        </div>
+     </div>
+   </div>
+   </div>
 
  <!-- Edit Wine Modal -->
 <div class="modal fade" id="editWineModal" tabindex="-1" role="dialog" aria-labelledby="editWineModalLabel" aria-hidden="true">
