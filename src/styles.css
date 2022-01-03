@@ -23,7 +23,12 @@ body
 
 .form-inline
 {
-    margin-left: 2rem;
+    margin-left: 3rem;
+}
+
+.nav-item
+{
+    margin-right: 2rem;
 }
 
 
@@ -80,15 +85,19 @@ a:hover
     background-color: #383838;
 }
 
-@media screen and (max-width: 1200px)
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1199.5px)
 {
-    .form-inline
+    .form-inline,
+    .form-control,
+    .nav-item
     {
         margin: auto;
     }
 
-    .navbar
+    .form-control
     {
-        justify-content: center;
+        margin-top: 1rem;
     }
 }
