@@ -19,8 +19,8 @@
          </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-         <input type="search" ngModel
-          name="key" id="searchName" class="form-control" placeholder="Search wine..." required>
+         <input type="search" ngModel="{{editWine?.name}}"
+         name="key" id="searchName" class="form-control" placeholder="Search wine..." required>
       </form>
    </div>
 </nav>
@@ -105,7 +105,58 @@
         </div>
      </div>
    </div>
+</div>
+
+<!-- Edit Wine Modal -->
+<div class="modal fade" id="updateWineModal" tabindex="-1" role="dialog" aria-labelledby="updateWineModalLabel" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+        <div class="modal-header">
+           <h5 class="modal-title" id="updateWineModalLabel">Update Wine</h5>
+        </div>
+        <div class="modal-body">
+           <form #editForm="ngForm">
+               <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" ngModel="{{editWine?.name}}" name="name" class="form-control" id="name" placeholder="Name">
+               </div>
+               <div class="form-group">
+                  <label for="strain">Strain</label>
+                  <input type="strain" ngModel="{{editWine?.strain}}" name="strain" class="form-control" id="strain" placeholder="Strain" required>
+               </div>
+               <div class="form-group">
+                  <label for="color">Color</label>
+                  <input type="text" ngModel="{{editWine?.color}}" name="color" class="form-control" id="color" placeholder="Color" required>
+               </div>
+               <div class="form-group">
+                  <label for="vintage">Vintage</label>
+                  <input type="number" ngModel="{{editWine?.vintage}}" name="vintage" class="form-control" id="vintage" min="1700" max="2022" placeholder="2018" required>
+               </div>
+               <div class="form-group">
+                     <label for="taste">Taste</label>
+                     <input type="text" ngModel="{{editWine?.taste}}" name="taste" class="form-control" id="taste" placeholder="Taste" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="country">Country</label>
+                     <input type="text" ngModel="{{editWine?.country}}" name="country" class="form-control" id="country" placeholder="Country" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="rating">Rating</label>
+                     <input type="number" ngModel="{{editWine?.rating}}" name="rating" class="form-control" id="rating" min="0" max="5" placeholder="0-5" required>
+                  </div> 
+               <div class="form-group">
+                  <label for="color">Image URL</label>
+                  <input type="text" ngModel="{{editWine?.imageURL}}" name="imageURL" class="form-control" id="imageURL" placeholder="Image URL" required>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" id="" data-dismiss="modal" class="btn btn-secondary">Close</button>
+                  <button (click)="onUpdateWine(editForm.value)" data-dismiss="modal" class="btn btn-primary" >Save</button>
+               </div>
+           </form>
+        </div>
+     </div>
    </div>
+</div>
 
  <!-- Edit Wine Modal -->
 <div class="modal fade" id="editWineModal" tabindex="-1" role="dialog" aria-labelledby="editWineModalLabel" aria-hidden="true">
