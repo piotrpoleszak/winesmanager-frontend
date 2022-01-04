@@ -77,8 +77,9 @@ body
 
 .btn
 {
-    margin-left: 10px!important;
+    margin-left: 20px!important;
     border-radius: 5px!important;
+    width: 2.5rem;
 }
 
 .w-60
