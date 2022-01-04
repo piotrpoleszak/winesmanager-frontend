@@ -120,6 +120,8 @@
                   <label for="name">Name</label>
                   <input type="text" ngModel="{{editWine?.name}}" name="name" class="form-control" id="name" placeholder="Name">
                </div>
+               <input type="hidden" ngModel="{{editWine?.id}}" name="id" class="form-control" id="id">
+               <input type="hidden" ngModel="{{editWine?.wineCode}}" name="wineCode" class="form-control" id="wineCode">
                <div class="form-group">
                   <label for="strain">Strain</label>
                   <input type="strain" ngModel="{{editWine?.strain}}" name="strain" class="form-control" id="strain" placeholder="Strain" required>
@@ -150,7 +152,7 @@
                </div>
                <div class="modal-footer">
                   <button type="button" id="" data-dismiss="modal" class="btn btn-secondary">Close</button>
-                  <button (click)="onUpdateWine(editForm.value)" data-dismiss="modal" class="btn btn-primary" >Save</button>
+                  <button (click)="onUpdateWine(editForm.value)" data-dismiss="modal" class="btn btn-primary">Save</button>
                </div>
            </form>
         </div>
