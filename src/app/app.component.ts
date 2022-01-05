@@ -12,6 +12,7 @@ import { NgForm } from '@angular/forms';
 export class AppComponent implements OnInit {
   public wines: Wine[] = [];
   public editWine: any; 
+  public deleteWine: any;
 
   constructor(private wineService: WineService){}
 
@@ -36,6 +37,7 @@ export class AppComponent implements OnInit {
       (response: Wine) => {
         console.log(response);
         this.getWines();
+        addForm.reset();
       },
       (error: HttpErrorResponse) => {
         alert(error.message);
@@ -46,6 +48,18 @@ export class AppComponent implements OnInit {
   public onUpdateWine(wine: Wine): void {
     this.wineService.updateWine(wine).subscribe(
       (response: Wine) => {
+        console.log(response);
+        this.getWines();
+      },
+      (error: HttpErrorResponse) => {
+        alert(error.message);
+      }
+    );
+  }
+
+  public onDeleteWine(wineId: number): void {
+    this.wineService.deleteWine(wineId).subscribe(
+      (response: void) => {
         console.log(response);
         this.getWines();
       },
@@ -68,10 +82,10 @@ export class AppComponent implements OnInit {
 
     if (mode === 'edit') {
       this.editWine = wine;
-      //this.editWine = wine;
       button.setAttribute('data-target', '#updateWineModal');
     }
     if(mode === 'delete') {
+      this.deleteWine = wine;
       button.setAttribute('data-target', '#deleteWineModal');
     }
     
