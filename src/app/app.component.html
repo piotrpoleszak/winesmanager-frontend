@@ -108,6 +108,7 @@
    </div>
 </div>
 
+
 <!-- Edit Wine Modal -->
 <div class="modal fade" id="updateWineModal" tabindex="-1" role="dialog" aria-labelledby="updateWineModalLabel" aria-hidden="true">
    <div class="modal-dialog" role="document">
@@ -161,6 +162,7 @@
    </div>
 </div>
 
+
 <!-- Delete Modal -->
 <div class="modal fade" id="deleteWineModal" tabindex="-1" role="dialog" aria-labelledby="deleteModelLabel" aria-hidden="true">
    <div class="modal-dialog" role="document">
@@ -179,6 +181,7 @@
    </div>
 </div>
 
+
 <!-- View Modal -->
 <div class="modal fade" id="viewWineModal" tabindex="-1" role="dialog" aria-labelledby="viewModelLabel" aria-hidden="true">
    <div class="modal-dialog" role="document">
@@ -189,12 +192,15 @@
          <div class="modal-body view-modal-card">
             <div class="form-group">
                <p>Name: {{getWineById?.name}}</p>
-               <p>Strain: {{getWineById?.strain}}</p>
-               <p>Vintage: {{getWineById?.vintage}}</p>
-               <p>Taste: {{getWineById?.taste}}</p>
-               <p>Country: {{getWineById?.country}}</p>
-               <p>Color: {{getWineById?.color}}</p>
-               <p>Rating: {{getWineById?.rating}}</p>
+               <p class="view-card">Strain: {{getWineById?.strain}}</p>
+               <p class="view-card">Vintage: {{getWineById?.vintage}}</p>
+               <p class="view-card">Taste: {{getWineById?.taste}}</p>
+               <p class="view-card">Country: {{getWineById?.country}}</p>
+               <p class="view-card">Color: {{getWineById?.color}}</p>
+               <p class="view-card">Rating: {{getWineById?.rating}}</p>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn-secondary view-btn-close" data-dismiss="modal">Close</button>
             </div>
          </div>
       </div>

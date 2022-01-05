@@ -129,6 +129,20 @@ a
     margin: auto;
 }
 
+.view-card
+{
+    margin-top: 3rem;
+}
+
+.view-btn-close
+{
+    margin: auto;
+    border-radius: 7px;
+    height: 3rem;
+    width: 4.5rem;
+    border: none;
+}
+
 /* MEDIA QUERIES */
 @media screen and (max-width: 1199.5px)
 {
