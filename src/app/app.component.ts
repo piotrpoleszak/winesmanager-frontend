@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   public wines: Wine[] = [];
   public editWine: any; 
   public deleteWine: any;
+  public getWineById: any;
 
   constructor(private wineService: WineService){}
 
@@ -87,6 +88,10 @@ export class AppComponent implements OnInit {
     if(mode === 'delete') {
       this.deleteWine = wine;
       button.setAttribute('data-target', '#deleteWineModal');
+    }
+    if(mode === 'view') {
+      this.getWineById = wine;
+      button.setAttribute('data-target', '#viewWineModal')
     }
     
     container?.appendChild(button);

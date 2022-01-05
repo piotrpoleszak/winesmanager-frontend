@@ -46,7 +46,8 @@
           </ul>
           <div class="card-body">
              <div class="float-right btn-group btn-group-sm">
-                <a (click)="onOpenModal(this.wine, 'edit')" class="btn btn-secondary tooltips" data-placement="top" data-original-title="Edit"><i class="uil uil-edit"></i> </a>
+                <a (click)="onOpenModal(wine, 'view')" class="btn btn-primary tooltips" data-placement="top" data-original-title="View"><i class="uil uil-eye"></i></a>
+                <a (click)="onOpenModal(wine, 'edit')" class="btn btn-secondary tooltips" data-placement="top" data-original-title="Edit"><i class="uil uil-edit"></i> </a>
                 <a (click)="onOpenModal(wine, 'delete')" class="btn btn-secondary tooltips" data-placement="top" data-original-title="Delete"><i class="fa fa-times"></i></a>
              </div>
           </div>
@@ -176,10 +177,26 @@
          </div>
       </div>
    </div>
- </div>
- </div>
+</div>
 
-<!-- Delete Wine Modal -->
-<div class="modal fade" id="deleteWineModal" tabindex="-1" role="dialog" aria-labelledby="deleteWineModalLabel" aria-hidden="true">
-
+<!-- View Modal -->
+<div class="modal fade" id="viewWineModal" tabindex="-1" role="dialog" aria-labelledby="viewModelLabel" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="viewModelLabel">View Wine</h5>
+         </div>
+         <div class="modal-body view-modal-card">
+            <div class="form-group">
+               <p>Name: {{getWineById?.name}}</p>
+               <p>Strain: {{getWineById?.strain}}</p>
+               <p>Vintage: {{getWineById?.vintage}}</p>
+               <p>Taste: {{getWineById?.taste}}</p>
+               <p>Country: {{getWineById?.country}}</p>
+               <p>Color: {{getWineById?.color}}</p>
+               <p>Rating: {{getWineById?.rating}}</p>
+            </div>
+         </div>
+      </div>
+   </div>
 </div>

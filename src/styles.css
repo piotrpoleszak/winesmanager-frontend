@@ -124,6 +124,11 @@ a
     margin-top: 2.5rem;
 }
 
+.view-modal-card
+{
+    margin: auto;
+}
+
 /* MEDIA QUERIES */
 @media screen and (max-width: 1199.5px)
 {

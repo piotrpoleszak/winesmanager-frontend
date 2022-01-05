@@ -14,6 +14,10 @@ export class WineService {
     return this.http.get<any>(`${this.apiServerUrl}/wine/all`);
   }
 
+  public getWineById(wine: Wine): Observable<Wine> {
+    return this.http.get<Wine>(`${this.apiServerUrl}/wine/find/{id}`);
+  }
+
   public addWine(wine: Wine): Observable<Wine> {
     return this.http.post<Wine>(`${this.apiServerUrl}/wine/add`, wine)
   }
