@@ -19,7 +19,7 @@
          </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-         <input type="search" ngModel="{{editWine?.name}}"
+         <input type="search" ngModel
          name="key" id="searchName" class="form-control" placeholder="Search wine..." required>
       </form>
    </div>
@@ -46,8 +46,8 @@
           </ul>
           <div class="card-body">
              <div class="float-right btn-group btn-group-sm">
-                <a (click)="onOpenModal(wine, 'edit')" class="btn btn-secondary tooltips" data-placement="top" data-original-title="Edit"><i class="uil uil-edit"></i> </a>
-                <a (click)="onOpenModal(wine, 'delete')" class="btn btn-secondary tooltips" data-placement="top" data-original-title="Delete"><i class="fa fa-times"></i></a>
+                <a (click)="onOpenModal(this.wine, 'edit')" class="btn btn-secondary tooltips" data-placement="top" data-original-title="Edit"><i class="uil uil-edit"></i> </a>
+                <a (click)="onOpenModal(this.wine, 'delete')" class="btn btn-secondary tooltips" data-placement="top" data-original-title="Delete"><i class="fa fa-times"></i></a>
              </div>
           </div>
        </div>
@@ -158,11 +158,6 @@
         </div>
      </div>
    </div>
-</div>
-
- <!-- Edit Wine Modal -->
-<div class="modal fade" id="editWineModal" tabindex="-1" role="dialog" aria-labelledby="editWineModalLabel" aria-hidden="true">
-
 </div>
 
 <!-- Delete Wine Modal -->

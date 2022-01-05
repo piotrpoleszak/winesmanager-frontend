@@ -68,6 +68,7 @@ export class AppComponent implements OnInit {
 
     if (mode === 'edit') {
       this.editWine = wine;
+      //this.editWine = wine;
       button.setAttribute('data-target', '#updateWineModal');
     }
     if(mode === 'delete') {
