@@ -19,7 +19,7 @@
          </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-         <input type="search" ngModel
+         <input type="search" (ngModelChange)="searchWines(key.value)" #key="ngModel" ngModel
          name="key" id="searchName" class="form-control" placeholder="Search wine..." required>
       </form>
    </div>
@@ -120,37 +120,37 @@
            <form #editForm="ngForm">
                <div class="form-group">
                   <label for="name">Name</label>
-                  <input type="text" ngModel="{{editWine?.name}}" name="name" class="form-control" id="name" placeholder="Name">
+                  <input type="text" ngModel="{{editWine?.name}}" name="name" class="form-control" id="name">
                </div>
                <input type="hidden" ngModel="{{editWine?.id}}" name="id" class="form-control" id="id">
                <input type="hidden" ngModel="{{editWine?.wineCode}}" name="wineCode" class="form-control" id="wineCode">
                <div class="form-group">
                   <label for="strain">Strain</label>
-                  <input type="strain" ngModel="{{editWine?.strain}}" name="strain" class="form-control" id="strain" placeholder="Strain" required>
+                  <input type="strain" ngModel="{{editWine?.strain}}" name="strain" class="form-control" id="strain" required>
                </div>
                <div class="form-group">
                   <label for="color">Color</label>
-                  <input type="text" ngModel="{{editWine?.color}}" name="color" class="form-control" id="color" placeholder="Color" required>
+                  <input type="text" ngModel="{{editWine?.color}}" name="color" class="form-control" id="color" required>
                </div>
                <div class="form-group">
                   <label for="vintage">Vintage</label>
-                  <input type="number" ngModel="{{editWine?.vintage}}" name="vintage" class="form-control" id="vintage" min="1700" max="2022" placeholder="2018" required>
+                  <input type="number" ngModel="{{editWine?.vintage}}" name="vintage" class="form-control" id="vintage" min="1700" max="2022" required>
                </div>
                <div class="form-group">
                      <label for="taste">Taste</label>
-                     <input type="text" ngModel="{{editWine?.taste}}" name="taste" class="form-control" id="taste" placeholder="Taste" required>
+                     <input type="text" ngModel="{{editWine?.taste}}" name="taste" class="form-control" id="taste"  required>
                   </div>
                   <div class="form-group">
                      <label for="country">Country</label>
-                     <input type="text" ngModel="{{editWine?.country}}" name="country" class="form-control" id="country" placeholder="Country" required>
+                     <input type="text" ngModel="{{editWine?.country}}" name="country" class="form-control" id="country" required>
                   </div>
                   <div class="form-group">
                      <label for="rating">Rating</label>
-                     <input type="number" ngModel="{{editWine?.rating}}" name="rating" class="form-control" id="rating" min="0" max="5" placeholder="0-5" required>
+                     <input type="number" ngModel="{{editWine?.rating}}" name="rating" class="form-control" id="rating" min="0" max="5" required>
                   </div> 
                <div class="form-group">
                   <label for="color">Image URL</label>
-                  <input type="text" ngModel="{{editWine?.imageURL}}" name="imageURL" class="form-control" id="imageURL" placeholder="Image URL" required>
+                  <input type="text" ngModel="{{editWine?.imageURL}}" name="imageURL" class="form-control" id="imageURL" required>
                </div>
                <div class="modal-footer">
                   <button type="button" id="" data-dismiss="modal" class="btn btn-secondary">Close</button>

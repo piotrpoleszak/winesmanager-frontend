@@ -70,6 +70,26 @@ export class AppComponent implements OnInit {
     );
   }
 
+  public searchWines(key: string): void {
+    const results: Wine[] = [];
+
+    for(const wine of this.wines) {
+      if (wine.name.toLowerCase().indexOf(key.toLowerCase()) !== -1
+      || wine.strain.toLowerCase().indexOf(key.toLowerCase()) !== -1
+      || wine.country.toLowerCase().indexOf(key.toLowerCase()) !== -1
+      || wine.color.toLowerCase().indexOf(key.toLowerCase()) !== -1
+      || wine.vintage.toString().indexOf(key.toLowerCase()) !== -1
+      || wine.rating.toString().indexOf(key.toLowerCase()) !== -1) {
+        results.push(wine);
+      }
+    }
+
+    this.wines = results;
+    if(results.length === 0 || !key) {
+      this.getWines();
+    }
+  }
+
   public onOpenModal(wine: Wine | null, mode: string): void {
     const container = document.getElementById('main-container');
     const button = document.createElement('button');
