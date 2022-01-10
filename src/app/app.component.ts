@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Wine } from './wine';
 import { WineService } from './wine.service';
 import { NgForm } from '@angular/forms';
+import { saveAs } from 'file-saver';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ export class AppComponent implements OnInit {
   public editWine: any; 
   public deleteWine: any;
   public getWineById: any;
+  wineList?: Wine[];
 
   constructor(private wineService: WineService){}
 
@@ -68,6 +70,12 @@ export class AppComponent implements OnInit {
         alert(error.message);
       }
     );
+  }
+
+  public downloadFile(): void {
+    this.wineService
+      .download()
+      .subscribe(blob => saveAs(blob, 'wine.json'));
   }
 
   public searchWines(key: string): void {

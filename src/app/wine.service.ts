@@ -29,4 +29,10 @@ export class WineService {
   public deleteWine(wineId: number): Observable<void> {
     return this.http.delete<void>(`${this.apiServerUrl}/wine/delete/${wineId}`)
   }
+
+  public download(): Observable<Blob> {
+    return this.http.get(`${environment.apiBaseUrl}/wine/downloadJson`, {
+      responseType: 'blob'
+    });
+  }
 }
